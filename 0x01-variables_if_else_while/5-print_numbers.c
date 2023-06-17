@@ -8,7 +8,14 @@
 
 int main(void)
 {
-	printf("0123456789\n");
+	int x;
+
+	for (x = 0; x <= 9; x++)
+	{
+		putchar(x + '0');
+	}
+
+	putchar('\n');
 
 	return (0);
 }
