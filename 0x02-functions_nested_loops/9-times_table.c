@@ -17,25 +17,21 @@
 
 		for (r = 0; r <= 9; r++)
 		{
-
+			_putchar('0')
+				;
 			for (c = 0; c <= 9; c++)
 			{
 
+				_putchar(',');
+				_putchar(' ');
+
 				p = r * c;
 
-				if (c != 0)
-				{
-
-					_putchar(',');
-					_putchar(' ');
-
-				}
-
-				if (p < 10)
+				if (p <= 9)
 					_putchar(' ');
 				else
-
 					_putchar(p / 10 + '0');
+
 				_putchar(p % 10 + '0');
 			}
 
@@ -44,3 +40,4 @@
 		}
 
 	}
+
