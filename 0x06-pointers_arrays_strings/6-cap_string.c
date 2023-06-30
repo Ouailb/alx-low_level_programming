@@ -29,7 +29,7 @@ char *cap_string(char *s)
 			if (*(s + nb) == sp[i])
 			{
 				if ((*(s + (nb + 1)) >= 'a') && (*(s + (nb + 1)) <= 'z'))
-					*(s + (nb + 1)) = *(s + (nb + 1)) - 32;
+					*(s + (nb + 1)) = *(s + (nb + 1)) - ' ';
 				break;
 			}
 		}
