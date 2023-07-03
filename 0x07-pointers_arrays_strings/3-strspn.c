@@ -7,13 +7,12 @@
  * Return: the number of accepted bytes.
  */
 
-
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int nb = 0;
-	int exist;
+	unsigned int count = 0;
+	int exist = 1;
 
-	while (*s)
+	while (*s && exist)
 	{
 		exist = 0;
 
@@ -21,17 +20,14 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (*s == accept[i])
 			{
-				nb++;
+				count++;
 				exist = 1;
 				break;
 			}
 		}
 
-		if (!exist)
-			break;
-
 		s++;
 	}
 
-	return (nb);
+	return (count);
 }
