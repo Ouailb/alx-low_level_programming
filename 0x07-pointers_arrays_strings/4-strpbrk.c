@@ -7,20 +7,19 @@
  * bytes in accept, or NULL if no such byte is found.
  */
 
-
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i = 0, j;
+	unsigned int x = 0, w;
 
-	while (*(s + i) != '\0')
+	while (*(s + x) != '\0')
 	{
-		for (j = 0; *(accept + j) != '\0'; j++)
+		for (w = 0; *(accept + w) != '\0'; w++)
 		{
-			if (*(s + i) == *(accept + j))
-				return (s + i);
+			if (*(s + x) == *(accept + w))
+				return (s + x);
 		}
 
-		i++;
+		x++;
 	}
 	return ('\0');
 }
