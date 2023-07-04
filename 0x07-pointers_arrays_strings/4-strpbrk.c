@@ -8,15 +8,13 @@
  */
 
 
-
 char *_strpbrk(char *s, char *accept)
 {
-	if (s == NULL || accept == NULL)
-		return (NULL);
-
 	for (; *s != '\0'; s++)
 	{
-		for (char *a = accept; *a != '\0'; a++)
+		char *a = accept;
+
+		for (; *a != '\0'; a++)
 		{
 			if (*s == *a)
 				return (s);
