@@ -10,15 +10,15 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
+	va_list oy;
 	unsigned int i = 0;
 
-	va_start(args, n);
+	va_start(oy, n);
 
 	for (; i < n; i++)
 	{
 
-		char *str = va_arg(args, char*);
+		char *str = va_arg(oy, char*);
 
 		if (str == NULL)
 		{
@@ -35,7 +35,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 	}
 
-	va_end(args);
+	va_end(oy);
 	printf("\n");
 }
 
