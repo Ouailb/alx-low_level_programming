@@ -3,6 +3,16 @@
 #include "main.h"
 
 
+
+{
+	if (close(elf) == -1)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't close fd %d\n", elf);
+		exit(98);
+	}
+}
+
 /**
  * main - Displays the information contained in the
  *        ELF header at the start of an ELF file.
